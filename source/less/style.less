@@ -1,0 +1,72 @@
+@import url("variables.less");
+@import url("main-header.less");
+@import url("main-nav.less");
+@import url("promo.less");
+@import url("button.less");
+@import url("features.less");
+@import url("product-series.less");
+@import url("how-its-work.less");
+@import url("example.less");
+@import url("contacts.less");
+@import url("main-footer.less");
+@import url("social.less");
+@import url("copyright.less");
+
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/oswaldregular.woff2"),
+    url("../fonts/oswaldregular.woff");
+}
+
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/oswaldmedium.woff2"),
+    url("../fonts/oswaldmedium.woff");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  background: @color-body-background;
+  width: 100%;
+  margin: 0;
+  font-family: "Oswald", "Arial", sans-serif;
+  color: @color-text-black;
+}
+
+// img {
+//   max-width: 100%;
+//   height: auto;
+//   display: block;
+// }
+
+.center () {
+  margin: 0 auto;
+  width: 320px;
+}
+
+.text-content () {
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Arial", "Helvetica", sans-serif;
+  color: @color-text-special-grey;
+}
