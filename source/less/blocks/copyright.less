@@ -1,12 +1,21 @@
 .copyright {
   padding-top: 22px;
   height: 80px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    height: auto;
+  }
 }
 
 .copyright__inner {
   display: flex;
   justify-content: space-between;
   margin-bottom: 22px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 }
 
 .copyright__text {
@@ -14,4 +23,8 @@
   font-size: 16px;
   margin: 0;
   align-self: center;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 22px;
+  }
 }

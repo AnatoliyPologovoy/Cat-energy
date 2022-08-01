@@ -1,0 +1,265 @@
+.example__wrapper {
+  @media (min-width: @tablet-width) {
+    min-width: 768px;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 0 110px;
+    display: grid;
+    grid-template-columns: 440px auto;
+    grid-template-rows: 206px 165px auto;
+  }
+}
+
+.example {
+  padding-top: 27px;
+  padding-bottom: 20px;
+  background-color: @color-fill-grey2;
+  background-repeat: no-repeat;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    background-color: transparent;
+    background-image: linear-gradient(@color-fill-grey2, @color-fill-grey2);
+    background-position: 0 bottom;
+    background-size: 100% 462px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 65px;
+    background-size: 100% 520px;
+  }
+}
+
+.example__title {
+  margin: 0;
+  margin-bottom: 33px;
+  text-align: left;
+}
+
+.example__text {
+  .text-content();
+  margin: 0;
+  margin-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+}
+
+.example__inner-stat {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.example__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    width: 366px;
+  }
+}
+
+.example__item {
+  width: 124px;
+
+  @media (min-width: @tablet-width) {
+    width: 162px;
+  }
+}
+
+.example__number {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+  text-align: center;
+  border: 1px solid @color-border-grey2;
+  border-radius: 3px;
+  text-transform: uppercase;
+  padding: 15px 0 17px 0;
+}
+
+.example__description {
+  font-family: "Arial", "Helvetica", sans-serif;
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 400;
+  text-align: center;
+  padding: 0 10px;
+  margin: 0 auto;
+  margin-top: -10px;
+  background-color: @color-fill-grey2;
+  display: table;
+
+  @media (min-width: @tablet-width) {
+    background-color: @color-body-background;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: @color-fill-grey2;
+  }
+}
+
+.example__description-br {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.example__total-costs {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+  margin-bottom: 44px;
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+    align-self: start;
+    font-size: 20px;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+  }
+}
+
+.example__total-costs span {
+  @media (min-width: @tablet-width) {
+    margin-top: 9px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+    margin-left: 63px;
+  }
+}
+
+.example__inner-check-group {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto;
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: -1;
+  }
+}
+
+.example__pic {
+  width: 300px;
+  height: 240px;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url("../img/before.png");
+  margin-bottom: 13px;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 4;
+
+  @media (min-width: @tablet-width) {
+    width: 550px;
+    height: 536px;
+  }
+}
+
+.example__before {
+  justify-self: right;
+  align-self: center;
+  position: relative;
+}
+
+//transparent pseudo area above .example__checkbox-pseudo for active checkbox
+.example__before::before {
+  content: "";
+  top: 4px;
+  left: 57px;
+  width: 84px;
+  height: 15px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.example__checkbox {
+  bottom: 1px;
+}
+
+.example__checkbox:checked ~ .example__pic {
+  background-image: url("../img/after.png");
+}
+
+.example__after {
+  justify-self: left;
+  align-self: center;
+}
+
+.example__checkbox-pseudo {
+  width: 84px;
+  height: 15px;
+  border: 1px solid @color-border-grey2;
+  border-radius: 6px;
+  background-color: @color-body-background;
+  position: relative;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  justify-self: center;
+  align-self: center;
+}
+
+.example__checkbox-pseudo::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 6px;
+  width: 35px;
+  height: 6px;
+  background: @color-basic-green;
+  border-radius: 6px;
+  transition: all 0.3s;
+}
+
+.example__checkbox:checked ~ .example__checkbox-pseudo::before {
+  left: 41px;
+}
+
+

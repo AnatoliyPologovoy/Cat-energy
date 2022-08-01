@@ -1,0 +1,10 @@
+.gift {
+  width: 280px;
+  height: 289px;
+}
+.gift__text {
+  font-family: 'Arial';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}

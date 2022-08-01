@@ -4,3 +4,7 @@
   height: 265px;
   padding: 0 20px;
 }
+.main-header__inner {
+  display: flex;
+  justify-content: space-between;
+}

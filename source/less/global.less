@@ -1,0 +1,32 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  background: @color-body-background;
+  width: 100%;
+  margin: 0;
+  font-family: "Oswald", "Arial", sans-serif;
+  color: @color-text-black;
+}
+
+// img {
+//   max-width: 100%;
+//   height: auto;
+//   display: block;
+// }
