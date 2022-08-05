@@ -2,22 +2,75 @@
   padding-top: 27px;
 }
 
+.catalog__container--title {
+  padding-bottom: 41px;
+}
+
 .catalog__title {
   text-align: left;
+}
+
+.catalog__wrapper-title {
+  .center();
+  width: 320px;
+  padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+    margin: 0 auto;
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+}
+
+.catalog__container {
+  border-bottom: 1px solid @color-border-grey;
+
+  @media (min-width: @tablet-width) {
+    border-bottom: none;
+  }
 }
 
 .catalog__wrapper {
   .center();
   width: 320px;
   padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    width: auto;
+    padding: 0;
+  }
 }
 
-.catalog__container {
-  border-bottom: 1px solid @color-border-grey;
-}
+.catalog__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 
-.catalog__container--title {
-  padding-bottom: 41px;
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+    margin: 0 auto;
+    padding-left: 110px;
+    padding-right: 110px;
+  }
 }
 
 .catalog__container--product {
@@ -30,28 +83,80 @@
   padding-bottom: 25px;
 }
 
-.catalog__list {
-  margin: 0;
-  padding: 0;
+// additional list
+
+.catalog__additional {
+  .center();
+  width: 320px;
+  padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+    margin: 0 auto;
+    padding-left: 110px;
+    padding-right: 110px;
+  }
 }
 
 .catalog__additional-title {
   margin: 0;
   margin-bottom: 36px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 68px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
 }
 
 .catalog__additional {
   padding-top: 25px;
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding-bottom: 86px;
+  }
 }
 
 .catalog__additional-list {
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1) {
+    // padding: 20px 38px;
+    border: 1px solid @color-border-grey2;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 896px;
+  }
 }
+
+// gift
 
 .catalog__additional-gift {
   .center();
   margin-top: 39px;
   margin-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 81px;
+    margin-bottom: 76px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
 }

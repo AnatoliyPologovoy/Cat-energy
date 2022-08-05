@@ -17,6 +17,15 @@
   font-size: 14px;
   line-height: 18px;
   padding: 11px 0;
+
+  @media (min-width: @tablet-width) {
+    width: 244px;
+    height: 54px;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 17px 0;
+    z-index: 3;
+  }
 }
 
 .button--form-submit {
@@ -26,6 +35,18 @@
   line-height: 20px;
   font-style: normal;
   margin-bottom: 21px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    width: 282px;
+    height: 52px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 568px;
+  }
+
 }
 
 .button--catalog {

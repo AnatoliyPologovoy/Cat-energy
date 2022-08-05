@@ -3,14 +3,14 @@
     display: flex;
     width: 768px;
     margin: 0 auto;
-    padding: 0 30px;
+    padding: 24px 30px;
     justify-content: space-between;
   }
 
   @media (min-width: @desktop-width) {
     width: 1440px;
     margin: 0 auto;
-    padding: 0 110px;
+    padding: 53px 110px 29px 110px;
   }
 }
 
@@ -43,9 +43,26 @@
     min-width: 440px;
     margin: 0;
     padding: 0;
+    position: relative;
+    z-index: 3;
   }
 
   @media (min-width: @desktop-width) {
     min-width: 478px;
+  }
+}
+
+.main-header__background-fill {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    display: block;
+    background-color: fade(@color-green, 85%);
+    width: 50%;
+    height: 700px;
+    left: 50%;
+    top: 0;
+    z-index: 1;
   }
 }

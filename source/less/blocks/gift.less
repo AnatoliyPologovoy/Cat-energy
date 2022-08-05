@@ -1,7 +1,20 @@
 .gift {
   width: 280px;
-  height: 289px;
+  height: 290px;
   background-image: url("../../img/gift-mobile.png");
+  padding: 43px 58px;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+    height: 200px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 245px;
+    height: 289px;
+    padding: 43px 42px;
+    justify-self: end;
+  }
 }
 
 .gift__text {
@@ -10,4 +23,11 @@
   font-size: 16px;
   line-height: 20px;
   color: @color-text-white;
+  text-align: center;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0px;
+  }
 }
+

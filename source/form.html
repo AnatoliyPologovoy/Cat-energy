@@ -58,50 +58,53 @@
         </p>
       </div>
       <form class="form__main" method="get" action="https://echo.htmlacademy.ru/">
-        <!-- data-list -->
-        <div class="form__container form__container--border-bottom">
-          <div class="form__inner">
-            <fieldset class="form__cat-data-list form--fieldset">
-              <div class="form__cat-data-item">
-                <label for="name">
-                  Имя:*
-                </label>
-                <input type="text" id="name" name="name" placeholder="Барсик" required>
-              </div>
-              <div class="form__cat-data-item">
-                <label for="weight">
-                  Вес (кг):*
-                </label>
-                <input type="text" id="weight" name="weight" placeholder="7" required>
-              </div>
-              <div class="form__cat-data-item">
-                <label for="age">
-                  Возраст (Лет):
-                </label>
-                <input type="text" id="age" name="age" placeholder="7">
-              </div>
-            </fieldset>
+        <div class="form__box">
+          <!--cat data-list -->
+          <div class="form__container form__container--border-bottom">
+            <div class="form__inner--cat-data-target">
+              <fieldset class="form__cat-data-list form--fieldset">
+                <div class="form__cat-data-item">
+                  <label for="name">
+                    Имя:*
+                  </label>
+                  <input type="text" id="name" name="name" placeholder="Барсик" required>
+                </div>
+                <div class="form__cat-data-item">
+                  <label for="weight">
+                    Вес (кг):*
+                  </label>
+                  <input type="text" id="weight" name="weight" placeholder="7" required>
+                </div>
+                <div class="form__cat-data-item">
+                  <label for="age">
+                    Возраст (Лет):
+                  </label>
+                  <input type="text" id="age" name="age" placeholder="7">
+                </div>
+              </fieldset>
+            </div>
+          </div>
+          <!-- target-list -->
+          <div class="form__container form__container--border-bottom">
+            <div class="form__inner--cat-data-target">
+              <fieldset class="form__target-list form--fieldset">
+                <div class="form__target-item">
+                  <input type="radio" name="target" id="weight-loss" checked>
+                  <label for="weight-loss">Похудение</label>
+                </div>
+                <div class="form__target-item">
+                  <input type="radio" name="target" id="weight-gain">
+                  <label for="weight-gain">Набор массы</label>
+                </div>
+                <div class="form__target-item">
+                  <input type="radio" name="target" id="dont-know">
+                  <label for="dont-know">Незнаю (Нужен ваш совет)</label>
+                </div>
+              </fieldset>
+            </div>
           </div>
         </div>
-        <!-- target-list -->
-        <div class="form__container form__container--border-bottom">
-          <div class="form__inner form__inner--border-bottom">
-            <fieldset class="form__target-list form--fieldset">
-              <div class="form__target-item">
-                <input type="radio" name="target" id="weight-loss" checked>
-                <label for="weight-loss">Похудение</label>
-              </div>
-              <div class="form__target-item">
-                <input type="radio" name="target" id="weight-gain">
-                <label for="weight-gain">Набор массы</label>
-              </div>
-              <div class="form__target-item">
-                <input type="radio" name="target" id="dont-know">
-                <label for="dont-know">Незнаю (Нужен ваш совет)</label>
-              </div>
-            </fieldset>
-          </div>
-        </div>
+        <!-- user-contacts -->
         <fieldset class="form__user-contacts-list form--fieldset">
           <div class="form__wrapper">
             <legend class="form__desc">Контактные данные<br>
@@ -124,15 +127,18 @@
           </div>
         </fieldset>
         <fieldset class="form__comments form--fieldset">
-          <legend class="form__desc">Комментарий</legend>
+          <div class="form__wrapper">
+            <legend class="form__desc">Комментарий</legend>
+          </div>
           <div class="form__wrapper form__wrapper--comments">
-            <textarea name="comments" rows="5">Расскажите обо всех повадках кота
-            </textarea>
+            <textarea name="comments" rows="5" placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
         </fieldset>
         <fieldset class="form__additional form--fieldset">
-          <legend class="form__desc">Дополнительно</legend>
-          <div class="form__inner">
+          <div class="form__wrapper">
+            <legend class="form__desc form__desc--additional-form">Дополнительно</legend>
+          </div>
+          <div class="form__wrapper">
             <ul class="form__additional-list">
               <li class="form__additional-item">
                 <input type="checkbox" name="sweetener" id="sweetener" checked>
@@ -160,7 +166,8 @@
               </li>
             </ul>
           </div>
-          <div class="form__inner">
+          </div>
+          <div class="form__wrapper form__inner-submit">
             <button class="button button--form-submit" type="submit">
               Отправить заявку
             </button>
@@ -173,7 +180,7 @@
     </section>
   </main>
   <footer class="main-footer">
-    <article class="main-footer__contacts contacts">
+    <article class="main-footer__contacts contacts contacts--grey">
       <div class="contacts__wrapper wrapper">
         <p class="contacts__invite">
           приглашаем<br>

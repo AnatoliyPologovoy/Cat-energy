@@ -7,6 +7,7 @@
   line-height: 20px;
   text-transform: uppercase;
   text-align: center;
+  color: @color-text-black;
 
   @media (min-width: @tablet-width) {
     display: flex;
@@ -23,12 +24,18 @@
   }
 }
 
+.main-nav__list--main-page {
+  @media (min-width: @desktop-width) {
+    color: @color-body-background;
+  }
+}
+
 .main-nav__item {
   height: 64px;
   padding: 22px 0 24px 0;
 
   a {
     text-decoration: none;
-    color: @color-text-black;
+    color: inherit;
   }
 }
