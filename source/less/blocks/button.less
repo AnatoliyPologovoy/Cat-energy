@@ -11,6 +11,14 @@
   padding: 0;
   font-weight: 400;
   border: none;
+
+  &:hover {
+    background-color: @color-hover-green;
+  }
+
+  &:active {
+    color: fade(@color-text-white, 30%);
+  }
 }
 
 .button--promo {
@@ -35,6 +43,7 @@
   line-height: 20px;
   font-style: normal;
   margin-bottom: 21px;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -54,3 +63,18 @@
   line-height: 20px;
   padding: 10px 0;
 }
+
+.button--show-goods {
+  background-color: @color-fill-grey;
+  color: @color-text-special-grey;
+  padding: 8px 0;
+
+  &:hover {
+    background-color: @color-hover-grey;
+  }
+
+  &:active {
+    color: fade(@color-text-special-grey, 30%);
+  }
+}
+

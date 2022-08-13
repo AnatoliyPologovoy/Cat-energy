@@ -121,16 +121,42 @@
   color: @color-text-black;
   grid-column-start: 1;
   grid-column-end: 3;
+  display: inline;
 
   @media (min-width: @tablet-width) {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 3;
     grid-row-end: 4;
+    justify-self: start;
   }
 
   @media (min-width: @desktop-width) {
     grid-column-start: 1;
     grid-column-end: 3;
   }
+}
+
+.product-series__link svg {
+  margin-left: 15px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 25px;
+  }
+}
+
+.product-series__arrow-long {
+  display: none;
+}
+
+.product-series__link:hover .product-series__arrow {
+  display: none;
+}
+
+.product-series__link:hover .product-series__arrow-long {
+  display: inline;
+}
+
+.product-series__link:active {
+  opacity: 0.3;
 }

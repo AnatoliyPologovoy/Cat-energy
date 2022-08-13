@@ -1,3 +1,66 @@
+.main-nav {
+  position: relative;
+}
+
+.main-nav__menu-toggle {
+  position: absolute;
+  right: 20px;
+  top: -50px;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 2;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav--nojs .main-nav__menu-toggle {
+  display: none;
+}
+
+.main-nav--opened .main-nav__menu-toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: -3px;
+    width: 25px;
+    height: 1px;
+    background-color: black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.main-nav--closed .main-nav__menu-toggle {
+  width: 24px;
+  height: 16px;
+  top: -48px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 24px;
+    height: 1px;
+    background-color: black;
+    box-shadow: 0 7px 0 0 black,
+    0 15px 0 0 black;
+  }
+}
+
 .main-nav__list {
   list-style: none;
   padding: 0;
@@ -31,11 +94,57 @@
 }
 
 .main-nav__item {
+  position: relative;
   height: 64px;
-  padding: 22px 0 24px 0;
+  padding: 22px 20px 24px 20px;
+  border-bottom: 1px solid @color-border-grey;
 
   a {
     text-decoration: none;
     color: inherit;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 22px 0 24px 0;
+    border-bottom: 0;
+  }
+}
+
+@media (max-width: @tablet-width - 1) {
+  .main-nav--closed .main-nav__item {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__item {
+    display: block;
+  }
+}
+
+.main-nav__item--current::before {
+
+  @media (min-width: @tablet-width) {
+    content: "";
+    position: absolute;
+    bottom: 6px;
+    width: 100%;
+    height: 2px;
+    background-color: @color-basic-green;
+  }
+}
+
+.main-nav__list--main-page .main-nav__item--current::before {
+
+  @media (min-width: @desktop-width) {
+    background-color: @color-body-background;
+  }
+}
+
+.main-nav__item a[href] {
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }

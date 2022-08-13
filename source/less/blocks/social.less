@@ -20,4 +20,29 @@
 
 .social__item:not(:last-child) {
   margin-right: 35px;
+
+  &:hover path {
+    fill: @color-basic-green;
+  }
+
+  &:active path {
+    fill: @color-basic-green;
+    opacity: 0.3;
+  }
+}
+
+.social__item:last-child {
+
+  &:hover path {
+    stroke: @color-basic-green;
+  }
+
+  &:active path {
+    stroke: @color-basic-green;
+    opacity: 0.3;
+  }
+}
+
+.social__item {
+  cursor: pointer;
 }

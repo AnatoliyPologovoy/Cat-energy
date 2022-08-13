@@ -169,7 +169,7 @@
   line-height: 20px;
   text-transform: uppercase;
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto 460px auto;
   grid-template-rows: auto auto;
 
   @media (min-width: @desktop-width) {
@@ -216,6 +216,10 @@
   position: absolute;
   z-index: 2;
   cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .example__checkbox {
@@ -244,6 +248,13 @@
   grid-column-end: 3;
   justify-self: center;
   align-self: center;
+
+  @media (min-width: @tablet-width) {
+    width: 428px;
+    height: 6px;
+    border: none;
+    background-color: @color-border-grey2;
+  }
 }
 
 .example__checkbox-pseudo::before {
@@ -256,6 +267,36 @@
   background: @color-basic-green;
   border-radius: 6px;
   transition: all 0.3s;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.example__toggle {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    position: absolute;
+    top: -15px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: @color-body-background;
+    background-image: radial-gradient(@color-basic-green, @color-basic-green 4px, white 4px);
+    border: 1px solid @color-border-grey2;
+    box-shadow: 0 5px 15px -10px black;
+    transform: translateX(-50%);
+
+    &:hover {
+      box-shadow: 0 5px 15px -7px black;
+    }
+
+    &:active {
+      border: 1px solid @color-basic-green;
+    }
+  }
 }
 
 .example__checkbox:checked ~ .example__checkbox-pseudo::before {

@@ -18,13 +18,14 @@
           <a class="main-header__logo-link">
             <img class="main-header__logo-text" src="img/logo-cat-energy.svg" width="101" height="18" alt="cat energy">
           </a>
-          <button class="main-header__menu-toggle main-header__menu-toggle--close" type="button" aria-label="Закрыть меню">
-          </button>
+          <div class="main-header__empty"></div>
         </div>
       </div>
       <div class="main-header__wrapper-nav wrapper">
         <!-- к классу элемента добавляем класс блока, чтобы создать новое пространство имён -->
-        <nav class="main-header__main-nav main-nav">
+        <nav class="main-header__main-nav main-nav main-nav--closed main-nav--nojs">
+          <button class="main-nav__menu-toggle" type="button" aria-label="Закрыть меню">
+          </button>
           <ul class="main-nav__list">
             <li class="main-nav__item ">
               <a href="index.html">
@@ -37,7 +38,7 @@
               </a>
             </li>
             <li class="main-nav__item main-nav__item--current">
-              <a href="">
+              <a>
                 Подбор программы
               </a>
             </li>
@@ -244,5 +245,21 @@
       </div>
     </div>
   </footer>
+  <script>
+    let buttonMenu = document.querySelector('.main-nav__menu-toggle');
+    let mainNav = document.querySelector('.main-nav');
+    mainNav.classList.remove('main-nav--nojs');
+
+    buttonMenu.addEventListener('click', function () {
+      if (mainNav.classList.contains('main-nav--closed')) {
+      mainNav.classList.remove('main-nav--closed');
+      mainNav.classList.add('main-nav--opened');
+      }
+      else {
+      mainNav.classList.remove('main-nav--opened');
+      mainNav.classList.add('main-nav--closed');
+      }
+    });
+  </script>
 </body>
 </html>
