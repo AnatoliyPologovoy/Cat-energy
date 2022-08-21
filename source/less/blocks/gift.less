@@ -17,6 +17,12 @@
   }
 }
 
+.gift__icon {
+  background-image: url("../img/icon_gift.svg");
+  width: 80px;
+  height: 80px;
+}
+
 .gift__text {
   font-family: 'Arial';
   font-weight: 400;
@@ -26,8 +32,11 @@
   text-align: center;
   margin: 0;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet-width) and (max-width: @tablet-width) {
     margin-bottom: 0px;
+    text-align: left;
   }
 }
+
+
 

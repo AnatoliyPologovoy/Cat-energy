@@ -62,6 +62,15 @@
   font-size: 16px;
   line-height: 20px;
   padding: 10px 0;
+
+  @media (max-width: @tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-top: auto;
+  }
 }
 
 .button--show-goods {
@@ -75,6 +84,10 @@
 
   &:active {
     color: fade(@color-text-special-grey, 30%);
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-top: auto;
   }
 }
 
