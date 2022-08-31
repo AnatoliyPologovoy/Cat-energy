@@ -4,9 +4,21 @@
   background-image: url("../../img/gift-mobile.png");
   padding: 43px 58px;
 
-  @media (min-width: @tablet-width) {
+  @media (min-resolution: 2dppx) {
+    background-size: cover;
+    background-image: url("../../img/gift-mobile@2x.png");
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1) {
+    background-image: url("../../img/gift-tablet.png");
     width: 708px;
     height: 200px;
+
+    @media (min-resolution: 2dppx) {
+      background-size: contain;
+      background-image: url("../../img/gift-tablet@2x.png");
+    }
   }
 
   @media (min-width: @desktop-width) {

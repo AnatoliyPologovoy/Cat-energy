@@ -21,11 +21,11 @@
 .social__item:not(:last-child) {
   margin-right: 35px;
 
-  &:hover path {
+  &:hover svg {
     fill: @color-basic-green;
   }
 
-  &:active path {
+  &:active svg {
     fill: @color-basic-green;
     opacity: 0.3;
   }
@@ -33,11 +33,11 @@
 
 .social__item:last-child {
 
-  &:hover path {
+  &:hover svg {
     stroke: @color-basic-green;
   }
 
-  &:active path {
+  &:active svg {
     stroke: @color-basic-green;
     opacity: 0.3;
   }
@@ -46,3 +46,11 @@
 .social__item {
   cursor: pointer;
 }
+
+.social__link svg {
+  @media (min-width: @tablet-width) {
+    transform: scale(1.40);
+  }
+}
+
+

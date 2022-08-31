@@ -193,6 +193,11 @@
   grid-row-end: 2;
   grid-column-start: 1;
   grid-column-end: 4;
+  background-size: contain;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/before@2x.png");
+  }
 
   @media (min-width: @tablet-width) {
     width: 550px;
@@ -229,6 +234,11 @@
 
 .example__checkbox:checked ~ .example__pic {
   background-image: url("../img/after.png");
+
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/after@2x.png");
+  }
 }
 
 .example__after {

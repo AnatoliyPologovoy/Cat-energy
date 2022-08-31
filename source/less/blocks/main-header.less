@@ -29,7 +29,15 @@
   align-items: center;
 
   @media (min-width: @tablet-width) {
+    padding-top: 7px;
+    padding-left: 0px;
     width: 175px;
+  }
+}
+
+.main-header__logo-link:nth-child(2) {
+  @media (min-width: @tablet-width) {
+    display: none;
   }
 }
 
@@ -59,11 +67,18 @@
   @media (min-width: @desktop-width) {
     position: absolute;
     display: block;
+    background-image: linear-gradient(@color-green, @color-green), url("../../img/background-desktop.jpg");
     background-color: fade(@color-green, 85%);
+    background-size: contain;
+    background-repeat: no-repeat;
     width: 50%;
     height: 700px;
     left: 50%;
     top: 0;
     z-index: 1;
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(@color-green, @color-green), url("../../img/background-desktop@2x.jpg");
+    }
   }
 }
